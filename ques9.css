@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+  }
+  
+  .nav-bar {
+    background-color: #333;
+    padding: 20px 0;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 40px;               /* Space between items */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-menu li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  

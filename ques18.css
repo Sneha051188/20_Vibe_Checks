@@ -1,0 +1,148 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    padding: 0;
+  }
+  
+  /* Hero Section with Parallax Effect */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1558980664-10d3b1b04b77?auto=format&fit=crop&w=1400&q=80') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax magic */
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  /* Animation for Hero Text */
+  @keyframes fadeSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero h1, .hero p, .hero .cta-button {
+    opacity: 0;
+    animation: fadeSlide 0.8s ease forwards;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    animation-delay: 0.3s;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation-delay: 0.6s;
+  }
+  
+  .hero .cta-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation-delay: 0.9s;
+  }
+  
+  .hero .cta-button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Mobile fallback for parallax */
+  @media (max-width: 768px) {
+    .hero {
+      background-attachment: scroll; /* Prevent parallax on mobile */
+    }
+  }
+  
+  /* Title Styling */
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0;
+    color: #333;
+  }
+  
+  /* Gallery Filters */
+  .filters {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filters input, .filters select {
+    padding: 8px;
+    margin: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Meme Gallery Layout */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px 50px;
+  }
+  
+  /* Individual Meme Styling */
+  .meme {
+    width: 250px;
+    text-align: center;
+  }
+  
+  .meme img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .meme img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .meme p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  /* Lightbox Styling */
+  .lightbox {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+  }
+  

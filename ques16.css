@@ -1,0 +1,40 @@
+/* Base setup */
+:root {
+    font-size: 16px; /* 1rem = 16px by default */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  /* Section using PX */
+  .box-px {
+    background: #dbe9ff;
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  
+  /* Section using REM */
+  .box-rem {
+    background: #ffe9db;
+    width: 37.5rem;        /* 600px / 16 = 37.5rem */
+    padding: 1.25rem;      /* 20px / 16 = 1.25rem */
+    margin: 1.25rem auto;  /* 20px */
+    font-size: 1.125rem;   /* 18px */
+    border-radius: 0.625rem; /* 10px */
+  }
+  
+  /* Make both responsive */
+  @media (max-width: 700px) {
+    .box-px,
+    .box-rem {
+      width: 90%;
+    }
+  }
+  

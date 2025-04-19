@@ -1,0 +1,8 @@
+/* Import a stylish font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.styled-paragraph {
+  color: red;
+  font-size: 18px;
+  font-family: 'Roboto Slab', serif;
+}

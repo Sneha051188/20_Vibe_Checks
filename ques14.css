@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0f0f0, #dbe9ff);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .magic-button {
+    padding: 18px 36px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #0077cc;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover Glow */
+  .magic-button:hover {
+    background-color: #00aaff;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
+    transform: scale(1.05) rotate(2deg);
+  }
+  
+  /* Click Bounce */
+  .magic-button:active {
+    animation: bounce 0.25s ease-in-out;
+    transform: scale(0.95);
+  }
+  
+  @keyframes bounce {
+    0%   { transform: scale(0.95); }
+    50%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Center */
+  .center {
+    text-align: center;
+  }
+  
